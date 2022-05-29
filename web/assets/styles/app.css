@@ -1,0 +1,286 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif; */
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+}
+
+/* code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+} */
+
+header,
+footer {
+  background-color: #f8c50f;
+  /* height: 15vh; */
+  height: 11vh;
+  color: white;
+  padding: 2rem;
+
+  font-family: Roboto;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer {
+  text-align: center;
+}
+
+li {
+  display: inline-block;
+  margin: 1rem;
+  font-size: 24px;
+  color: white;
+}
+
+main {
+  min-height: 78vh;
+  padding: 2rem;
+}
+
+.menu {
+  color: white;
+  text-decoration: none;
+  font-size: 3rem;
+}
+.menu:visited {
+  color: white;
+}
+
+.menu:hover {
+  font-weight: 700;
+  font-size: 4rem;
+}
+
+a,
+a:hover,
+a:active,
+a:visited,
+a:focus {
+  text-decoration: none;
+  /* color: red; */
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  color: black;
+}
+
+.card {
+  box-shadow: 0 0 5px rgb(92, 92, 92);
+  border-radius: 5px;
+  background: white;
+  color: black;
+  cursor: pointer;
+  height: auto;
+  /* height: 10rem; */
+  width: 15rem;
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 2.4rem;
+}
+
+img {
+  height: 150px;
+  width: 100%;
+}
+
+.likeBut {
+  color: red;
+  position: relative;
+  top: 0.5rem;
+  left: 1.5rem;
+  border-style: none;
+  background-color: transparent;
+}
+
+.likes {
+  /* margin: 0 auto; */
+  color: blue;
+  position: relative;
+  left: 5rem;
+  top: -1rem;
+}
+
+h3 {
+  text-align: left;
+}
+
+.emonav {
+  font-size: 6rem;
+  color: #f8c50f;
+  text-decoration: none;
+  margin-right: 7rem;
+}
+
+#video {
+  /* position: relative; */
+  z-index: -1;
+  width: 25vw;
+  height: 70vh;
+}
+
+.homeMain {
+  display: flex;
+  height: 25rem;
+}
+
+.homeNav {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  text-decoration: none;
+}
+
+/* .emonav,
+.emonav:active,
+.emonav:hover,
+.menu:visited {
+  text-decoration: double;
+  background-color: aqua;
+  margin: 1px 1px;
+  padding: 1px;
+} */
+
+.emonav:hover {
+  font-size: 6.3rem;
+  /* text-shadow: 2px; */
+}
+Link:hover {
+  font-size: 16.3rem;
+  /* text-shadow: 2px; */
+}
+
+.spanImage {
+  background-image: url("./recipe-575434_1280.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* position: absolute; */
+
+  width: 6rem;
+  height: 6rem;
+  /* color: #4fa908; */
+  color: #f8c50f;
+  /* margin-right: 2rem; */
+}
+
+.flag {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 2rem;
+  border-color: blue;
+  border-style: solid;
+  border-width: 0.1rem;
+  background-size: cover;
+  position: relative;
+  top: -16rem;
+  left: -7rem;
+}
+
+.inputForm {
+  color: #4fa908;
+  display: inline;
+  font-weight: bold;
+  max-width: 15rem;
+  margin: 1.5rem auto;
+}
+
+form > div > label,
+form > div > div > label,
+legend {
+  width: 15%;
+  float: left;
+
+  /* padding-right: 10px; */
+}
+
+input,
+textarea,
+select,
+#countryCode,
+option {
+  /* background: #f4f4f4;
+  background-color: white; */
+  border: 1px solid rgb(102, 102, 102);
+  height: 2rem;
+  width: 17rem;
+  padding: 0.8rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  margin-bottom: 0.3rem;
+  /* color: red; */
+}
+
+.adrepbut {
+  width: 28rem;
+  vertical-align: text-top;
+  background-color: #4fa908;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: unset;
+}
+.adingbut {
+  width: 10rem;
+  vertical-align: text-top;
+  background-color: #4fa908;
+  color: white;
+  font-size: 0.9rem;
+  /* font-weight: bold; */
+  padding: unset;
+}
+
+.search {
+  text-align: center;
+}
+
+.menu2 {
+  font-size: 2.8rem;
+}
+.menu2:hover {
+  font-size: 3.4rem;
+}
+
+.spanImage2 {
+  background-image: url("./recipe-575434_1280.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* position: absolute; */
+
+  width: 6rem;
+  height: 3rem;
+  color: #4fa908;
+  /* color: #f8c50f; */
+  /* color: red; */
+  /* margin-right: 2rem; */
+}
+
+.emonav2 {
+  font-size: 2.8rem;
+  color: #f8c50f;
+  text-decoration: none;
+  margin-right: 7rem;
+}
+
+.video {
+  height: 35rem;
+  width: 150px;
+}

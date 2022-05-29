@@ -1,0 +1,12 @@
+# Misc.
+ssl
+.idea
+nbproject
+public/uploads/*
+!public/uploads/.gitkeep
+*.pem
+.DS_Store
+
+# env.
+.env
+
