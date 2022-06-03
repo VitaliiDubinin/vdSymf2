@@ -1,25 +1,35 @@
-# Symfony-MAMP
+# Overview and thanks.
 
-Symfony-MAMP is a set of docker images that include Starter-Kit for a MAMP stack ([Symfony6](https://symfony.com/), [macOS](https://www.apple.com/macos/monterey/), [Apache](https://www.apache.org/), [MySQL](https://www.mysql.com/), [PHP8](https://www.php.net/) and [phpMyAdmin](https://www.phpmyadmin.net/)) all in one handy package.
+      That is the first stage of RecipeApp. <br />
+      RecipeApp - it will be Collection of Recipes, adapted for children. That version on base of "Symfony"
+      <br />
+      It was made as a part of education in Business College Helsinki (www.bc.fi).
+      <br />
+      Full Stack Development programm.
+      <br />
+      Thanks a lot our teachers, Margit and Santosh.
+      <br />
+      Santosh's "symfony-mamp" and "recipe "api"" sre used.
+      Thanks a lot.
 
 ---
 
-## Using the image
+## Description:
+
+React, Symfony, MySQL. Full-Stack App.
+Edit Recipe not finished, likes is working, but manually reload of page needed (try to solve it)
 
 ## Installation
 
 ```shell
-git clone Symfony-MAMP
-cd Symfony-MAMP
-cp .env.example .env && cp web/.env.example web/.env
+git clone it
 docker-compose up --build
+npm install
+php/bin console doctrine:migration:migrate
 ```
 
-- Symfony 6 will run on [http://localhost:8007](http://localhost:8007)
-- phpMyAdmin will run on [http://localhost:9082](http://localhost:9082)
-
-### Apple M1 Chip
-Uncomment line 4, remove # from [docker-compose.yml](https://github.com/kalwar/Symfony-MAMP/blob/main/docker-compose.yml#L4)  file
+- Symfony 6 will run on [http://localhost:8707](http://localhost:8707)
+- phpMyAdmin will run on [http://localhost:9782](http://localhost:9782)
 
 # Use for reference
 
