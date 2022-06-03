@@ -12,8 +12,8 @@ echo -e "\033[1;37m___________________________________________________"
 echo -e ""
 echo -e "Symfony-MAMP is ready !"
 echo -e ""
-echo -e "\033[0;32mSymfony 6 runs on " http://localhost:8007
-echo -e "\033[0;32mphpMyAdmin runs on " http://localhost:9082
+echo -e "\033[0;32mSymfony 6 runs on " http://localhost:8707
+echo -e "\033[0;32mphpMyAdmin runs on " http://localhost:9782
 echo -e ""
 echo -e "\033[1;37m___________________________________________________"
 

@@ -106,17 +106,41 @@ img {
   color: red;
   position: relative;
   top: 0.5rem;
-  left: 1.5rem;
+  right: -10rem;
   border-style: none;
   background-color: transparent;
+  max-width: fit-content;
+  text-decoration: none;
+}
+.editBut {
+  color: #f8c50f;
+  font-size: 2rem;
+  position: relative;
+  top: -2.6rem;
+  right: -2rem;
+  border-style: none;
+  background-color: transparent;
+  max-width: fit-content;
+  text-decoration: none;
 }
 
 .likes {
   /* margin: 0 auto; */
   color: blue;
   position: relative;
-  left: 5rem;
+  left: 12rem;
   top: -1rem;
+  max-width: fit-content;
+}
+
+.delBut {
+  /* margin: 0 auto; */
+  color: rebeccapurple;
+  position: relative;
+  left: 13rem;
+  top: -19rem;
+  font-size: 2rem;
+  max-width: fit-content;
 }
 
 h3 {
@@ -192,7 +216,7 @@ Link:hover {
   background-size: cover;
   position: relative;
   top: -16rem;
-  left: -7rem;
+  left: -3rem;
 }
 
 .inputForm {
@@ -201,6 +225,17 @@ Link:hover {
   font-weight: bold;
   max-width: 15rem;
   margin: 1.5rem auto;
+}
+.extClass {
+  color: red;
+  display: inline;
+  font-weight: bold;
+  max-width: 15rem;
+  margin: 1.5rem auto;
+  z-index: 10;
+}
+.extClass adrepbut {
+  width: 10rem;
 }
 
 form > div > label,

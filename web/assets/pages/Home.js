@@ -16,6 +16,7 @@ const Home = () => {
             <div className="noto-emoji emonav">🧍🏻‍♀️👫🏿👫🧍🏻</div>
           </Link>
           <Link to="/addrecipe">
+            {/* <Link to="/api/recipes/add"> */}
             <div className="noto-emoji emonav spanImage">+ </div>
           </Link>
           <Link to="/recipes">

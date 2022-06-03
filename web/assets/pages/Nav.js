@@ -18,6 +18,7 @@ const Nav = () => {
         </li>
 
         <li>
+          {/* <Link to="/addrecipe" className="menu2 emonav2"> */}
           <Link to="/addrecipe" className="menu2 emonav2">
             <span className="spanImage2">.+ .</span>
           </Link>

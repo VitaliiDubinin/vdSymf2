@@ -17,16 +17,25 @@ class Recipe
     private $name;
 
     #[ORM\Column(type: 'string', length: 255)]
-    private $difficulty;
+    private $description;
 
     #[ORM\Column(type: 'array')]
-    private $ingredients = [];
+    private $ingreds = [];
 
     #[ORM\Column(type: 'string', length: 255)]
-    private $instructions;
+    private $instruction;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
-    private $photo;
+    private $image;
+
+    #[ORM\Column(type: 'integer', nullable: true)]
+    private $likes;
+
+    #[ORM\Column(type: 'string', length: 4)]
+    private $country2;
+
+    #[ORM\Column(type: 'string', length: 255)]
+    private $author;
 
     public function getId(): ?int
     {
@@ -45,50 +54,86 @@ class Recipe
         return $this;
     }
 
-    public function getDifficulty(): ?string
+    public function getDescription(): ?string
     {
-        return $this->difficulty;
+        return $this->description;
     }
 
-    public function setDifficulty(string $difficulty): self
+    public function setDescription(string $description): self
     {
-        $this->difficulty = $difficulty;
+        $this->description = $description;
 
         return $this;
     }
 
-    public function getIngredients(): ?array
+    public function getIngreds(): ?array
     {
-        return $this->ingredients;
+        return $this->ingreds;
     }
 
-    public function setIngredients(array $ingredients): self
+    public function setIngreds(array $ingreds): self
     {
-        $this->ingredients = $ingredients;
+        $this->ingreds = $ingreds;
 
         return $this;
     }
 
-    public function getInstructions(): ?string
+    public function getInstruction(): ?string
     {
-        return $this->instructions;
+        return $this->instruction;
     }
 
-    public function setInstructions(string $instructions): self
+    public function setInstruction(string $instruction): self
     {
-        $this->instructions = $instructions;
+        $this->instruction = $instruction;
 
         return $this;
     }
 
-    public function getPhoto(): ?string
+    public function getImage(): ?string
     {
-        return $this->photo;
+        return $this->image;
     }
 
-    public function setPhoto(?string $photo): self
+    public function setImage(?string $image): self
     {
-        $this->photo = $photo;
+        $this->image = $image;
+
+        return $this;
+    }
+
+    public function getLikes(): ?int
+    {
+        return $this->likes;
+    }
+
+    public function setLikes(?int $likes): self
+    {
+        $this->likes = $likes;
+
+        return $this;
+    }
+
+    public function getCountry2(): ?string
+    {
+        return $this->country2;
+    }
+
+    public function setCountry2(string $country2): self
+    {
+        $this->country2 = $country2;
+
+        return $this;
+    }
+
+    public function getAuthor(): ?string
+    {
+        return $this->author;
+    }
+
+    public function setAuthor(string $author): self
+    {
+        $this->author = $author;
 
         return $this;
     }

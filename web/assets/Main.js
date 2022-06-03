@@ -11,6 +11,12 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Recipes from "./pages/Recipes";
 import AddRecForm from "./pages/AddRecForm";
+import RecipeSingle from "./pages/RecipeSingle";
+
+// const RouterWrapper = (props) => {
+//   const params = useParams();
+//   return <RecipeSingle params={params} {...props} />;
+// };
 
 function Main() {
   return (
@@ -34,8 +40,10 @@ function Main() {
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="recipes" element={<Recipes />} />
+          <Route path="/api/recipes/find/:id" element={<RecipeSingle />} />
           {/* <Route path="recipes/:recipesingle" element={<RouterWrapper />} /> */}
-          <Route path="addrecipe" element={<AddRecForm />} />
+          <Route path="addrecipe" element={<AddRecForm addBut="Add recipe" />} />
+          {/* <Route path="/api/recipes/add" element={<AddRecForm />} /> */}
         </Route>
       </Routes>
       {/* </Layout> */}

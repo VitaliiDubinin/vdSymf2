@@ -6,8 +6,8 @@ const RecipeSingle = () => {
   const recipe = location.state.data;
   const country = location.state.country;
 
-  console.log(recipe);
-  console.log(country);
+  // console.log(recipe);
+  // console.log(country);
 
   return (
     <div className="card">

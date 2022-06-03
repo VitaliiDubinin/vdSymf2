@@ -22,10 +22,13 @@ class ReceipeController extends AbstractController
             $response[] = array(
                 'id' => $recipe->getId(),
                 'name' => $recipe->getName(),
-                'photo' => $recipe->getPhoto(),
-                'instructions' => $recipe->getInstructions(),
-                'difficulty' => $recipe->getDifficulty(),
-                'ingredients' => $recipe->getIngredients(),
+                'image' => $recipe->getImage(),
+                'instruction' => $recipe->getInstruction(),
+                'description' => $recipe->getDescription(),
+                'ingreds' => $recipe->getIngreds(),
+                'likes' => $recipe->getLikes(),
+                'country2' => $recipe->getCountry2(),
+                'author' => $recipe->getAuthor(),
             );
         }
         return $this->json($response);
@@ -36,18 +39,22 @@ class ReceipeController extends AbstractController
     {
         $em = $doctrine->getManager();
         $data = json_decode($request->getContent(), true);
-
+        // dump($data);
         $newRecipe = new Recipe();
 
         $newRecipe->setName($data["name"]);
-        $newRecipe->setPhoto($request->request->get("photo"));
-        $newRecipe->setInstructions($data["instructions"]);
-        $newRecipe->setDifficulty($data["difficulty"]);
-        $newRecipe->setIngredients($data["ingredients"]);
-
+        // $newRecipe->setImage($request->request->get("image"));
+        $newRecipe->setImage(isset($data["image"]));
+        $newRecipe->setInstruction($data["instruction"]);
+        $newRecipe->setDescription($data["description"]);
+        $newRecipe->setIngreds($data["ingreds"]);
+        // $newRecipe->setLikes($data["likes"]);
+        $newRecipe->setLikes(isset($data["likes"]));
+        $newRecipe->setCountry2($data["country2"]);
+        $newRecipe->setAuthor($data["author"]);
         $em->persist($newRecipe);
         $em->flush();
-
+// dd($em);
         return new Response('Added a new recipe ' . $newRecipe->getId());
     }
 
@@ -63,10 +70,14 @@ class ReceipeController extends AbstractController
         $data = [
             'id' => $recipe->getId(),
             'name' => $recipe->getName(),
-            'photo' => $recipe->getPhoto(),
-            'instructions' => $recipe->getInstructions(),
-            'difficulty' => $recipe->getDifficulty(),
-            'ingredients' => $recipe->getIngredients(),
+            'image' => $recipe->getImage(),
+            'instruction' => $recipe->getInstruction(),
+            'description' => $recipe->getDescription(),
+            'ingreds' => $recipe->getIngreds(),
+            'likes' => $recipe->getLikes(),
+            'country2' => $recipe->getCountry2(),
+            'author' => $recipe->getAuthor(),
+
         ];
         return $this->json($data);
     }
@@ -81,12 +92,17 @@ class ReceipeController extends AbstractController
             return $this->json('No recipe was found with the id of ' . $id, 404);
         }
 
-        $recipe->setName($request->request->get('name'));
+        $content = json_decode($request->getContent());
+        // $recipe->setName($content->name);
+        $recipe->setLikes($content->likes);
+
+        // $recipe->setName($request->request->get('name'));
         $entityManager->flush();
 
         $data =  [
             'id' => $recipe->getId(),
-            'name' => $recipe->getName(),
+            // 'name' => $recipe->getName(),
+            'likes' => $recipe->getName(),
         ];
 
         return $this->json($data);
