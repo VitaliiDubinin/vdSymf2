@@ -1,14 +1,14 @@
 # Overview and thanks.
 
-      That is the first stage of RecipeApp. <br />
+      That is the first stage of RecipeApp.
       RecipeApp - it will be Collection of Recipes, adapted for children. That version on base of "Symfony"
-      <br />
+
       It was made as a part of education in Business College Helsinki (www.bc.fi).
-      <br />
+
       Full Stack Development programm.
-      <br />
+
       Thanks a lot our teachers, Margit and Santosh.
-      <br />
+
       Santosh's "symfony-mamp" and "recipe "api"" sre used.
       Thanks a lot.
 
